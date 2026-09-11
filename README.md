@@ -1,12 +1,11 @@
-# Vulnerability Management
+Vulnerability Management
 
-## Product
-We build a vulnerability management service. People track a vuln — a security vulnerability — from discovery to verified fix.
-
-## Core item
+Product
+I build a vulnerability management service. People track a vuln - a security vulnerability - from discovery to verified fix.
+Core item
 The core tracked item is a Vuln, identified by a VulnId.
 
-## Status table
+Status table
 
 | From       | To         | Result    | Business reason |
 |------------|------------|-----------|------------------|
@@ -15,9 +14,9 @@ The core tracked item is a Vuln, identified by a VulnId.
 | DISCOVERED | PATCHED    | Forbidden | Skips validation before applying a fix. |
 | PATCHED    | DISCOVERED | Forbidden | Can't revert an already patched vulnerability. |
 
-## Forbidden — why
+Forbidden - why
 - DISCOVERED → PATCHED: a fix could be shipped for something never confirmed as a real issue.
 - PATCHED → DISCOVERED: erases the record that a fix was already applied, breaking the audit trail.
 
-## Running the tests
+Running the tests
 mvn -q test
