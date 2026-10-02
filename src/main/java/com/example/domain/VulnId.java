@@ -1,8 +1,8 @@
-package com.example;
+package com.example.domain;
 
 public class VulnId {
 
-    private String value;
+    private final String value;
 
     public VulnId(String value) {
         if (value == null || value.isBlank()) {

@@ -1,0 +1,3 @@
+com\example\domain\VulnPolicyTest.class
+com\example\config\VulnServiceTest.class
+com\example\domain\DomainHasNoSpringTest.class
